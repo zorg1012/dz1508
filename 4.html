@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a href=https://google.com >google1</a>
+    <a href=https://google.com >google2</a>
+    <a href=https://google.com >google3</a>
+    <a href=https://google.com >google4</a>
+    <a href=https://google.com >google5</a>
+    <script>
+        [...document.getElementsByTagName('a')].forEach((a) => {let clicks=0;
+             a.onclick = a => {a.preventDefault(); clicks++; if(clicks<4){a.target.innerText += "("+a.target.href+")"}}})
+    </script>
+    </body>
+    </html>
